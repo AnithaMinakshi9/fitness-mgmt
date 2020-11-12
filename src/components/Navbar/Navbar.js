@@ -22,7 +22,7 @@ function Navbar() {
             <GiIcons.GiFlame />
           </span>
           <div className="Login-Signup">
-            <Link to="/login" class-name="login">
+            <Link to="/form" class-name="login">
               <button className="btn">Login/SignUp</button>
             </Link>
           </div>

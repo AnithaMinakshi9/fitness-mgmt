@@ -7,18 +7,18 @@ import Form from "./pages/Form";
 import Contact from "./pages/Contact";
 
 function App() {
-	return (
-		<>
-			<Router>
-				<Navbar />
-				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/contact" component={Contact} />
-					<Route path="/form" component={Form} />
-				</Switch>
-			</Router>
-		</>
-	);
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/login" component={Form} />
+        </Switch>
+      </Router>
+    </>
+  );
 }
 
 export default App;

@@ -26,8 +26,8 @@
 .form-content-left {
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgb(231, 217, 155) 100%
+    rgb(231, 217, 155) 30%,
+    rgba(209, 161, 73, 0) 100%
   );
   border-radius: 10px 0 0 10px;
   position: relative;

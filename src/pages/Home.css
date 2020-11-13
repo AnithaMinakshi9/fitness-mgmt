@@ -8,7 +8,6 @@
   position: absolute;
   z-index: -1;
 }
-
 @media screen and (min-width: 740px) {
   .top .info {
     position: absolute;

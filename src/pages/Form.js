@@ -17,9 +17,7 @@ const Form = () => {
         <AiIcons.AiOutlineClose className="close-btn" />
       </Link>
       <div className="form-container">
-        <div className="form-content-left">
-          <img className="form-img" src="gym4.jpg" alt="spaceship" />
-        </div>
+        <div className="form-content-left"></div>
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
         ) : (

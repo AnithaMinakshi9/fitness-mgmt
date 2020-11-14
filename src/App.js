@@ -5,6 +5,8 @@ import "./App.css";
 import Home from "./pages/Home";
 import Form from "./pages/Form";
 import Contact from "./pages/Contact";
+import About from "./pages/Cards/cards";
+import Message from "./pages/Message";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/contact" component={Contact} />
           <Route path="/form" component={Form} />
+          <Route path="/about" component={About} />
+          <Route path="/message" component={Message} />
         </Switch>
       </Router>
     </>

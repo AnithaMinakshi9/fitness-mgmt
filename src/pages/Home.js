@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import { Button } from "@material-ui/core";
 import Appoint from "./appoint";
+import Message from "./Message";
 
 function Home() {
   return (
@@ -16,9 +16,9 @@ function Home() {
         <div className="buttons">
           <Appoint variant="contained" color="default"></Appoint>
           <br />
-          <Button variant="contained" color="default">
+          <Message variant="contained" color="default">
             Visit us
-          </Button>
+          </Message>
         </div>
       </div>
     </>

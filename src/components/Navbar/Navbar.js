@@ -17,12 +17,15 @@ function Navbar() {
           <Link to="#" className="menu-bars">
             <FaIcons.FaBars onClick={showSidebar} />
           </Link>
-          <span className="heading">
-            FITNESS MANAGEMENT
-            <GiIcons.GiFlame />
-          </span>
+          <Link to="/" className="head-link">
+            <span className="heading">
+              FITNESS MANAGEMENT
+              <GiIcons.GiFlame />
+            </span>
+          </Link>
+
           <div className="Login-Signup">
-            <Link to="/form" class-name="login">
+            <Link to="/form" className="login">
               <button className="btn">Login/SignUp</button>
             </Link>
           </div>

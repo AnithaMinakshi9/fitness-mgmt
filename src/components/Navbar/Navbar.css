@@ -95,6 +95,7 @@ span {
   background: #ecea67;
   color: black;
   border: 2px solid black;
+  cursor: pointer;
 }
 
 .btn {
@@ -109,9 +110,13 @@ span {
 .heading {
   font-family: fantasy, sans-serif;
   /* background: -webkit-linear-gradient(orange, #ffa);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; */
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent; */
   color: #ffa;
-  font-size: 40px;
+  font-size: 45px;
   letter-spacing: 3px;
+}
+
+.head-link {
+  text-decoration: none;
 }

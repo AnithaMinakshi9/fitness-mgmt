@@ -44,21 +44,22 @@ export default function AlertDialog() {
         <DialogTitle id="dialog-title">{"Reach out to us here!"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="dialog-description">
-            Send us a message with your email ID, and we'll get back to you
+            Send us a message by entering your email ID, and we'll get back to
+            you
           </DialogContentText>
         </DialogContent>
         <form className={classes.container} noValidate>
+          <TextField id="name" label="Name" className={classes.textField} />
+          <TextField
+            id="email"
+            label="Email-ID"
+            className={classes.textField}
+          />
           <TextField
             id="standard-textarea"
             label="Type message here"
             className={classes.textField}
             multiline
-          />
-
-          <TextField
-            id="email"
-            label="Email-ID"
-            className={classes.textField}
           />
         </form>
         <DialogActions>

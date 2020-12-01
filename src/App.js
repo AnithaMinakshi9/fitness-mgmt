@@ -3,12 +3,12 @@ import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import Form from "./pages/Form";
+import Form from "./pages/Signup-login/Form";
 import Contact from "./pages/Contact";
 import About from "./pages/Cards/cards";
 import Member from "./pages/Member";
 import Message from "./pages/Message";
-import Login from "./pages/Login";
+import Login from "./pages/Signup-login/Login";
 
 function App() {
   return (

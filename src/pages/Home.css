@@ -8,6 +8,16 @@
   position: absolute;
   z-index: -1;
 }
+
+.top .info {
+  position: absolute;
+  top: 40%;
+  margin: 5px;
+  background: #00000099;
+  padding: 8px;
+  border-radius: 5px;
+}
+
 @media screen and (min-width: 740px) {
   .top .info {
     position: absolute;
@@ -19,14 +29,7 @@
     border-radius: 5px;
   }
 }
-.top .info {
-  position: absolute;
-  top: 40%;
-  margin: 5px;
-  background: #00000099;
-  padding: 8px;
-  border-radius: 5px;
-}
+
 .top .info .large {
   font-size: 42px;
   font-weight: 600;
@@ -34,21 +37,10 @@
   color: #ffa;
   margin: 5px;
 }
+
 .top .info .small {
   font-size: 18px;
   color: #fff;
-}
-
-@media screen and (min-width: 740px) {
-  .top .buttons {
-    position: absolute;
-    top: 45%;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    left: 5%;
-    transform: none;
-  }
 }
 
 .top .buttons {
@@ -59,4 +51,16 @@
   flex-direction: column;
   left: 13%;
   transform: translate(-50%, 0%);
+}
+
+@media screen and (max-width: 740px) {
+  .top .buttons {
+    position: absolute;
+    top: 60%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    left: 5%;
+    transform: none;
+  }
 }

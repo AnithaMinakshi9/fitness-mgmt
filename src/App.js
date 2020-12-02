@@ -9,6 +9,7 @@ import About from "./pages/Cards/cards";
 import Member from "./pages/Member";
 import Message from "./pages/Message";
 import Login from "./pages/Signup-login/Login";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/message" component={Message} />
           <Route path="/member" component={Member} />
           <Route path="/login" component={Login} />
+          <Route path="/gallery" component={Gallery} />
         </Switch>
       </Router>
     </>

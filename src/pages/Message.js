@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,16 +7,32 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
+import axios from "axios";
 
 export default function AlertDialog() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault();
+    const userObject = {
+      email: value.name,
+      message: value.message
+    };
+    axios
+      .post("http://localhost:3000/messages", userObject)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setOpen(false);
+    setValue(e.target.value);
   };
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -53,11 +69,13 @@ export default function AlertDialog() {
           <TextField
             id="email"
             label="Email-ID"
+            value={value.name}
             className={classes.textField}
           />
           <TextField
             id="standard-textarea"
             label="Type message here"
+            value={value.message}
             className={classes.textField}
             multiline
           />

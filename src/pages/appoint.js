@@ -70,7 +70,7 @@ export default function AlertDialog() {
             id="datetime-local"
             label="Next appointment"
             type="datetime-local"
-            defaultValue="2017-05-24T10:30"
+            defaultValue="2020-12-12T6:30"
             value={value.datatime}
             className={classes.textField}
             InputLabelProps={{

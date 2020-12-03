@@ -11,13 +11,17 @@ import axios from "axios";
 
 export default function AlertDialog() {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const userObject = {
       name: value.name,
@@ -57,7 +61,7 @@ export default function AlertDialog() {
       </Button>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={handleSubmit}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
@@ -90,7 +94,7 @@ export default function AlertDialog() {
           />
         </form>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onSubmit={handleSubmit} color="primary">
             Submit
           </Button>
         </DialogActions>

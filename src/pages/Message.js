@@ -31,9 +31,9 @@ export default function AlertDialog() {
     e.preventDefault();
 
     const userObject = {
-      name: e.name,
-      email: e.email,
-      message: e.message
+      name: values.name,
+      email: values.email,
+      message: values.message
     };
     axios
       .post(
@@ -48,6 +48,7 @@ export default function AlertDialog() {
       });
     setOpen(false);
   };
+
   const useStyles = makeStyles((theme) => ({
     container: {
       display: "flex",
@@ -77,11 +78,12 @@ export default function AlertDialog() {
             you
           </DialogContentText>
         </DialogContent>
-        <form className={classes.container} onSubmit={handleSubmit} noValidate>
+        <form className={classes.container} noValidate>
           <TextField
             id="name"
             label="name"
             name="name"
+            value={values.name}
             className={classes.textField}
             onChange={handleChange}
           />
@@ -89,6 +91,7 @@ export default function AlertDialog() {
             id="email"
             label="email"
             name="email"
+            value={values.email}
             className={classes.textField}
             onChange={handleChange}
           />
@@ -96,11 +99,11 @@ export default function AlertDialog() {
             id="standard-textarea"
             label="message"
             name="message"
+            value={values.message}
             className={classes.textField}
             onChange={handleChange}
             multiline
           />
-          <button type="submit">submit</button>
         </form>
         <DialogActions>
           <Button onClick={handleSubmit} color="primary">

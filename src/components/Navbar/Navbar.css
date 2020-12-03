@@ -1,5 +1,5 @@
 .navbar {
-  background: linear-gradient(90deg, rgb(17, 17, 17) 100%, rgb(40, 40, 40) 0%);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 100%, rgb(40, 40, 40) 0%);
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -144,12 +144,12 @@ span {
 
 .heading {
   font-family: fantasy, sans-serif;
-  /* background: -webkit-linear-gradient(orange, #ffa);
+  /*  background: -webkit-linear-gradient(orange, #ffa);
 	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent; */
+	  -webkit-text-fill-color: transparent;  */
   color: #ffa;
-  font-size: 45px;
-  letter-spacing: 3px;
+  font-size: 50px;
+  letter-spacing: 2px;
 }
 
 @media screen and (max-width: 740px) {

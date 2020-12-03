@@ -12,6 +12,12 @@ export const SidebarData = [
     cName: "nav-text"
   },
   {
+    title: "Gallery",
+    path: "/gallery",
+    icon: <AiIcons.AiFillHome />,
+    cName: "nav-text"
+  },
+  {
     title: "My page",
     path: "/member",
     icon: <BsIcons.BsPersonSquare />,

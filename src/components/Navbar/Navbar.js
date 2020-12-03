@@ -19,7 +19,7 @@ function Navbar() {
           </Link>
           <Link to="/" className="head-link">
             <span className="heading">
-              FITNESS MANAGEMENT
+              ASAS FITNESS CLUB
               <GiIcons.GiFlame />
             </span>
           </Link>

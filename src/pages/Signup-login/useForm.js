@@ -30,7 +30,7 @@ const useForm = (callback, validate) => {
       email: values.email
     };
     axios
-      .post("http://localhost:3000/posts", userObject)
+      .post("https://fitness-management.herokuapp.com/signup", userObject)
       .then((res) => {
         console.log(res.data);
       })

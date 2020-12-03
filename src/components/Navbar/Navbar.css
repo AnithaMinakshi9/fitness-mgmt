@@ -144,9 +144,9 @@ span {
 
 .heading {
   font-family: fantasy, sans-serif;
-  /*  background: -webkit-linear-gradient(orange, #ffa);
-	  -webkit-background-clip: text;
-	  -webkit-text-fill-color: transparent;  */
+  background: -webkit-linear-gradient(orange, #ffa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: #ffa;
   font-size: 50px;
   letter-spacing: 2px;
@@ -155,12 +155,12 @@ span {
 @media screen and (max-width: 740px) {
   .heading {
     font-family: fantasy, sans-serif;
-    /* background: -webkit-linear-gradient(orange, #ffa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; */
+    background: -webkit-linear-gradient(orange, #ffa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 20%;
     color: #ffa;
-    font-size: 23px;
+    font-size: 25px;
     letter-spacing: 2px;
   }
 }

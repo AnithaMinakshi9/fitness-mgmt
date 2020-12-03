@@ -11,7 +11,7 @@ import axios from "axios";
 
 export default function AlertDialog() {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState({
+  const [values, setValues] = useState({
     name: "",
     email: "",
     message: ""
@@ -20,13 +20,19 @@ export default function AlertDialog() {
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value
+    });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const userObject = {
-      name: value.name,
-      email: value.email,
-      message: value.message
+      name: values.name,
+      email: values.email,
+      message: values.message
     };
     axios
       .post(
@@ -39,8 +45,8 @@ export default function AlertDialog() {
       .catch((error) => {
         console.log(error);
       });
+
     setOpen(false);
-    setValue(e.target.value);
   };
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -76,20 +82,23 @@ export default function AlertDialog() {
           <TextField
             id="name"
             label="Name"
-            value={value.name}
+            value={values.name}
             className={classes.textField}
+            onChange={handleChange}
           />
           <TextField
             id="email"
             label="Email-ID"
-            value={value.email}
+            value={values.email}
             className={classes.textField}
+            onChange={handleChange}
           />
           <TextField
             id="standard-textarea"
             label="Type message here"
-            value={value.message}
+            value={values.message}
             className={classes.textField}
+            onChange={handleChange}
             multiline
           />
         </form>

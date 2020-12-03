@@ -20,11 +20,15 @@ export default function AlertDialog() {
   const handleClose = (e) => {
     e.preventDefault();
     const userObject = {
-      email: value.name,
+      name: value.name,
+      email: value.email,
       message: value.message
     };
     axios
-      .post("http://localhost:3000/messages", userObject)
+      .post(
+        "https://fitness-management.herokuapp.com/message/formresult",
+        userObject
+      )
       .then((res) => {
         console.log(res.data);
       })
@@ -65,11 +69,16 @@ export default function AlertDialog() {
           </DialogContentText>
         </DialogContent>
         <form className={classes.container} noValidate>
-          <TextField id="name" label="Name" className={classes.textField} />
+          <TextField
+            id="name"
+            label="Name"
+            value={value.name}
+            className={classes.textField}
+          />
           <TextField
             id="email"
             label="Email-ID"
-            value={value.name}
+            value={value.email}
             className={classes.textField}
           />
           <TextField

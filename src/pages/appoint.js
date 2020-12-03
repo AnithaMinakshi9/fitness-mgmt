@@ -7,16 +7,34 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
+import axios from "axios";
 
 export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
-
+  const [value, setValue] = useState("");
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = (e) => {
+    e.preventDefault();
+    const userObject = {
+      datetime: value.datetime,
+      email: value.email
+    };
+    axios
+      .post(
+        "https://fitness-management.herokuapp.com/message/formresult",
+        userObject
+      )
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setOpen(false);
+    setValue(e.target.value);
   };
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -53,6 +71,7 @@ export default function AlertDialog() {
             label="Next appointment"
             type="datetime-local"
             defaultValue="2017-05-24T10:30"
+            value={value.datatime}
             className={classes.textField}
             InputLabelProps={{
               shrink: true
@@ -62,6 +81,7 @@ export default function AlertDialog() {
           <TextField
             id="email"
             label="Email-ID"
+            value={value.email}
             className={classes.textField}
           />
         </form>

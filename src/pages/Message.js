@@ -12,14 +12,14 @@ import axios from "axios";
 export default function AlertDialog() {
   const [open, setOpen] = useState(false);
   const [values, setValues] = useState({
-    name: "",
+    username: "",
     email: "",
     message: ""
   });
-
   const handleClickOpen = () => {
     setOpen(true);
   };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues({
@@ -29,10 +29,11 @@ export default function AlertDialog() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const userObject = {
-      name: values.name,
-      email: values.email,
-      message: values.message
+      name: e.name,
+      email: e.email,
+      message: e.message
     };
     axios
       .post(
@@ -45,7 +46,6 @@ export default function AlertDialog() {
       .catch((error) => {
         console.log(error);
       });
-
     setOpen(false);
   };
   const useStyles = makeStyles((theme) => ({
@@ -67,7 +67,6 @@ export default function AlertDialog() {
       </Button>
       <Dialog
         open={open}
-        onClose={handleSubmit}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
@@ -78,32 +77,33 @@ export default function AlertDialog() {
             you
           </DialogContentText>
         </DialogContent>
-        <form className={classes.container} noValidate>
+        <form className={classes.container} onSubmit={handleSubmit} noValidate>
           <TextField
             id="name"
-            label="Name"
-            value={values.name}
+            label="name"
+            name="name"
             className={classes.textField}
             onChange={handleChange}
           />
           <TextField
             id="email"
-            label="Email-ID"
-            value={values.email}
+            label="email"
+            name="email"
             className={classes.textField}
             onChange={handleChange}
           />
           <TextField
             id="standard-textarea"
-            label="Type message here"
-            value={values.message}
+            label="message"
+            name="message"
             className={classes.textField}
             onChange={handleChange}
             multiline
           />
+          <button type="submit">submit</button>
         </form>
         <DialogActions>
-          <Button onSubmit={handleSubmit} color="primary">
+          <Button onClick={handleSubmit} color="primary">
             Submit
           </Button>
         </DialogActions>

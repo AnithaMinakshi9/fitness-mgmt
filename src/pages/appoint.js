@@ -71,7 +71,7 @@ export default function AlertDialog() {
             label="Next appointment"
             type="datetime-local"
             defaultValue="2020-12-12T6:30"
-            value={value.datatime}
+            value={value.datetime}
             className={classes.textField}
             InputLabelProps={{
               shrink: true

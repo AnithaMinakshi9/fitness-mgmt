@@ -20,6 +20,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
+import Member from "./Membership";
 
 function Copyright() {
   return (
@@ -129,6 +130,7 @@ export default function Dashboard() {
 
   return (
     <div className={classes.root}>
+      <br />
       <CssBaseline />
       <AppBar
         position="absolute"
@@ -197,9 +199,11 @@ export default function Dashboard() {
               </Paper>
             </Grid>
 
-            {/* Recent Orders */}
             <Grid item xs={12}>
-              <Paper className={classes.paper}>hi</Paper>
+              <Paper className={classes.paper}>
+                <Member />
+              </Paper>
+              <CssBaseline />
             </Grid>
           </Grid>
           <Box pt={4}>

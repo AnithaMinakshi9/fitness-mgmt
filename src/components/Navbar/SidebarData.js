@@ -19,7 +19,7 @@ export const SidebarData = [
   },
   {
     title: "My page",
-    path: "/dashboard",
+    path: "/user",
     icon: <BsIcons.BsPersonSquare />,
     cName: "nav-text"
   },

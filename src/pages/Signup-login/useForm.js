@@ -45,7 +45,6 @@ const useForm = (callback, validate) => {
     setErrors(validate(values));
     setIsSubmitting(true);
     const userObject = {
-      
       password: values.password,
       email: values.email
     };
@@ -68,7 +67,7 @@ const useForm = (callback, validate) => {
     }
   }, [errors]);
 
-  return { handleChange, handleSubmit,handleSubmitL, values, errors };
+  return { handleChange, handleSubmit, handleSubmitL, values, errors };
 };
 
 export default useForm;

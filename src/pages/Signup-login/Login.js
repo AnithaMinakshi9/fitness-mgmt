@@ -10,16 +10,7 @@ const Login = ({ submitForm }) => {
     submitForm,
     validate
   );
-  /*  const [success, setsuccess] = useState({""});
 
-  const fetchData = async () => {
-    const response = await axios.get(
-      'https://www.anapioficeandfire.com/api/books?pageSize=30'
-    );
-
-    setBooks(response.data);
-  };
- */
   return (
     <>
       <Link to="/">
@@ -70,7 +61,7 @@ const Login = ({ submitForm }) => {
               {errors.password && <p>{errors.password}</p>}
             </div>
 
-            <button className="form-input-btn" type="submit">
+            <button className="form-input-btn" type="submit" onclick="/user">
               Login
             </button>
 

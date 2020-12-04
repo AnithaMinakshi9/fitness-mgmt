@@ -70,7 +70,7 @@ export default function Orders() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Recent Client Membership</Title>
+      <Title>Client Memberships</Title>
       <Table size="small">
         <TableHead>
           <TableRow>

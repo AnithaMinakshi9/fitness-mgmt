@@ -11,6 +11,7 @@ import Message from "./pages/Message";
 import Login from "./pages/Signup-login/Login";
 import Gallery from "./pages/Gallery";
 import Dashboard from "./pages/Admin/Dashboard1";
+import User from "./pages/User/DashboardU";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/user" component={User} />
         </Switch>
       </Router>
     </>

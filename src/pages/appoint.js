@@ -11,20 +11,31 @@ import axios from "axios";
 
 export default function AlertDialog() {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = useState("");
+  const [values, setValues] = useState({
+    datetime: "",
+    email: ""
+  });
   const handleClickOpen = () => {
     setOpen(true);
   };
-
-  const handleClose = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({
+      ...values,
+      [name]: value
+    });
+  };
+  const handleSubmit = (e) => {
     e.preventDefault();
+
     const userObject = {
-      datetime: value.datetime,
-      email: value.email
+      date: values.datetime,
+      time: values.datetime,
+      email: values.email
     };
     axios
       .post(
-        "https://fitness-management.herokuapp.com/message/formresult",
+        "https://fitness-management.herokuapp.com/schedules/formresult",
         userObject
       )
       .then((res) => {
@@ -34,7 +45,6 @@ export default function AlertDialog() {
         console.log(error);
       });
     setOpen(false);
-    setValue(e.target.value);
   };
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -55,7 +65,6 @@ export default function AlertDialog() {
       </Button>
       <Dialog
         open={open}
-        onClose={handleClose}
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
@@ -67,26 +76,26 @@ export default function AlertDialog() {
         </DialogContent>
         <form className={classes.container} noValidate>
           <TextField
-            id="datetime-local"
+            id="datetime"
             label="Next appointment"
             type="datetime-local"
-            defaultValue="2020-12-12T6:30"
-            value={value.datetime}
+            value={values.datetime}
             className={classes.textField}
             InputLabelProps={{
               shrink: true
             }}
           />
-
           <TextField
             id="email"
-            label="Email-ID"
-            value={value.email}
+            label="email"
+            name="email"
+            value={values.email}
             className={classes.textField}
+            onChange={handleChange}
           />
         </form>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleSubmit} color="primary">
             Submit
           </Button>
         </DialogActions>

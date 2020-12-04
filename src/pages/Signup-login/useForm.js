@@ -40,6 +40,27 @@ const useForm = (callback, validate) => {
         console.log(error);
       });
   };
+  const handleSubmitL = (e) => {
+    e.preventDefault();
+    setErrors(validate(values));
+    setIsSubmitting(true);
+    const userObject = {
+      
+      password: values.password,
+      email: values.email
+    };
+    axios
+      .post(
+        "https://fitness-management.herokuapp.com/login/formresult",
+        userObject
+      )
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
@@ -47,7 +68,7 @@ const useForm = (callback, validate) => {
     }
   }, [errors]);
 
-  return { handleChange, handleSubmit, values, errors };
+  return { handleChange, handleSubmit,handleSubmitL, values, errors };
 };
 
 export default useForm;

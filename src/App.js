@@ -10,6 +10,7 @@ import Member from "./pages/Member";
 import Message from "./pages/Message";
 import Login from "./pages/Signup-login/Login";
 import Gallery from "./pages/Gallery";
+import Dashboard from "./pages/Admin/Dashboard1";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/member" component={Member} />
           <Route path="/login" component={Login} />
           <Route path="/gallery" component={Gallery} />
+          <Route path="/dashboard" component={Dashboard} />
         </Switch>
       </Router>
     </>

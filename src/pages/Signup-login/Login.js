@@ -6,11 +6,20 @@ import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Login = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmitL, values, errors } = useForm(
     submitForm,
     validate
   );
+  /*  const [success, setsuccess] = useState({""});
 
+  const fetchData = async () => {
+    const response = await axios.get(
+      'https://www.anapioficeandfire.com/api/books?pageSize=30'
+    );
+
+    setBooks(response.data);
+  };
+ */
   return (
     <>
       <Link to="/">
@@ -19,7 +28,7 @@ const Login = ({ submitForm }) => {
       <div className="form-container">
         <div className="form-content-left"></div>
         <div className="form-content-right">
-          <form onSubmit={handleSubmit} className="form" noValidate>
+          <form onSubmit={handleSubmitL} className="form" noValidate>
             <h1>
               Get started with us today! Create your account by filling out the
               information below.
@@ -66,6 +75,9 @@ const Login = ({ submitForm }) => {
             </button>
             <span className="form-input-login">
               New to the page? Signup here! <Link to="/form">here</Link>
+            </span>
+            <span className="form-input-login">
+              Click <Link to="/dashboard">here</Link> for admin dashboard
             </span>
           </form>
         </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import * as BsIcons from "react-icons/bs";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
+import * as FcIcons from "react-icons/fc";
 
 export const SidebarData = [
   {
@@ -14,7 +14,7 @@ export const SidebarData = [
   {
     title: "Gallery",
     path: "/gallery",
-    icon: <AiIcons.AiFillHome />,
+    icon: <RiIcons.RiGalleryLine />,
     cName: "nav-text"
   },
   {
@@ -26,13 +26,13 @@ export const SidebarData = [
   {
     title: "About",
     path: "/about",
-    icon: <RiIcons.RiGalleryLine />,
+    icon: <FcIcons.FcAbout />,
     cName: "nav-text"
   },
   {
     title: "Contact",
     path: "/contact",
-    icon: <IoIcons.IoMdPeople />,
+    icon: <RiIcons.RiContactsBookFill />,
     cName: "nav-text"
   }
 ];

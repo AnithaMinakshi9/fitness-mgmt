@@ -72,7 +72,7 @@ export default function AlertDialog() {
         <DialogTitle id="dialog-title">{"Book An Appointment"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="dialog-description">
-            Choose a date and time according to your convienience!
+            Choose a date and time according to your convenience!
           </DialogContentText>
         </DialogContent>
         <form className={classes.container} noValidate>

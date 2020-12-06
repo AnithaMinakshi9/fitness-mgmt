@@ -5,7 +5,7 @@ export const SliderData = [
   },
   {
     image:
-      "https://lh3.googleusercontent.com/rMhKkcmRfCApl83yaFdG-RmDsfStnA-7mDWi4mpCDCXZLsLZzOsW2KZ_FblhXJV6jBJyX5zPuuKd7mUNIxR2gqjEyyQ=w256"
+      "https://media-cdn.tripadvisor.com/media/photo-s/0a/bd/0b/b3/photo1jpg.jpg"
   },
   {
     image:

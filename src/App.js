@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Form from "./pages/Signup-login/Form";
 import Contact from "./pages/Contact";
 import About from "./pages/Cards/cards";
-import Member from "./pages/Member";
 import Message from "./pages/Message";
 import Login from "./pages/Signup-login/Login";
 import Gallery from "./pages/Gallery";
@@ -24,7 +23,6 @@ function App() {
           <Route path="/form" component={Form} />
           <Route path="/about" component={About} />
           <Route path="/message" component={Message} />
-          <Route path="/member" component={Member} />
           <Route path="/login" component={Login} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/dashboard" component={Dashboard} />
